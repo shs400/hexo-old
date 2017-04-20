@@ -70,4 +70,4 @@ theme: clean-blog
 deploy:
   type: git
   repository: https://github.com/shs400/shs400.github.io.git
-  branch: matser
+  branch: gh-page
