@@ -42,3 +42,6 @@ $ hexo server  #기본 명령어
 $ hexo s       #축약형 명령어
 ```
 웹 브라우저에서 localhost:4000으로 접속하면 hexo가 적용된것을 확인할 수 있다.
+
+다음장에서는 기본적인 초기 Setting 후 본인의 github.io에
+본인이 작업한 blog를 등록하는 방법을 알아보자.
