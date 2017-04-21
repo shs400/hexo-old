@@ -191,7 +191,7 @@ git
 <p><img src="/img/hexo-install/img02.jpg" alt="github 홈페이지 캡쳐화면"></p>
 <p>본인의 아이디와 같은 이름의 repository name을 설정해준다.<br>같은 이름으로 생성해 주는이유는 github.io를 사용하기 위해서이고,<br>github.io는 계정당 하나만 사용할 수 있다.<br>(필자의 경우에는 이미 동일한 이름의 repository가 있기때문에 경고가 뜨는것이다.)</p>
 <p>repository name을 설정하고 Create repository 버튼을 클릭하게되면</p>
-<p><img src="/_img/hexo-install/img03.jpg" alt="github 홈페이지 캡쳐화면"></p>
+<p><img src="/img/hexo-install/img03.jpg" alt="github 홈페이지 캡쳐화면"></p>
 <p>화면이 나오는데 먼저 터미널을 실행시킨다.<br>cmd 혹은 우리는 git을 설치하였기에<br>git bash를 사용하자.</p>
 <p>터미널 사용법은 따로 설명하지 않도록 한다.<br>해당 git을 clone할 디렉토리 하나를 생성하고 터미널에서 해당 디렉토리로 이동한 후<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="string">"# &lt;본인 repository 이름&gt;"</span> &gt;&gt; README.md</div><div class="line">$ git init</div><div class="line">$ git add README.md</div><div class="line">$ git commit -m <span class="string">"first commit"</span></div><div class="line">$ git remote add origin https://github.com/shs400/ss123.git</div><div class="line">$ git push -u origin master</div></pre></td></tr></table></figure></p>
 <p>위에서 보았던 내용을 하나하나 입력하거나, 오른쪽의 copy버튼을 클릭해서 터미널 창에 붙여넣기하면 repository가 생성된다.</p>
