@@ -1,11 +1,30 @@
 ---
 title: Git에 Hexo 블로그를 적용해보자! (1)
 date: 2017-04-21 10:30:52
+category:
+- git
+- github
+- node.js
+- blog
 tags:
 - git
 - github
 - node.js
 - blog
+disqusIdentifier: shs400
+keywords:
+- javascript
+- hexo
+thumbnailImagePosition: left
+autoThumbnailImage: yes
+metaAlignment: center
+coverCaption: "A beautiful sunrise"
+coverMeta: out
+coverSize: partial
+coverImage: img01.jpg
+comments: false
+meta: false
+actions: false
 ---
 Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (1)
 <!-- excerpt -->

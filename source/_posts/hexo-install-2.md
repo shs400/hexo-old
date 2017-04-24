@@ -1,7 +1,16 @@
 ---
 title: Git에 Hexo 블로그를 적용해보자! (2)
 date: 2017-04-21 14:23:15
+category:
+- git
+- github
+- node.js
+- blog
 tags:
+- git
+- github
+- node.js
+- blog
 disqusIdentifier: shs400
 keywords:
 - javascript
