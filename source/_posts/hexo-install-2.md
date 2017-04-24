@@ -22,7 +22,7 @@ coverCaption: "A beautiful sunrise"
 coverMeta: out
 coverSize: partial
 coverImage: img01.jpg
-comments: false
+comments: true
 meta: false
 actions: false
 ---
