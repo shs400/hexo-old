@@ -216,7 +216,57 @@
     <section class="postShorten-group main-content-wrap">
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+    <article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2017/04/24/hexo-install-3/">
+                            Git에 Hexo 블로그를 적용해보자! (3)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-04-24T15:44:15+09:00">
+	
+		    4월 24, 2017
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/git/">git</a>, <a class="category-link" href="/categories/git/github/">github</a>, <a class="category-link" href="/categories/git/github/node-js/">node.js</a>, <a class="category-link" href="/categories/git/github/node-js/blog/">blog</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <p>Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (3)<br>
+                    
+                        <a href="/2017/04/24/hexo-install-3/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+            <a href="/2017/04/24/hexo-install-3/">
+                <div class="postShorten-thumbnailimg">
+                    <img alt="" itemprop="image" src="https://shs400.github.io/2017/04/24/hexo-install-3/img01.jpg"/>
+                </div>
+            </a>
+            
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
         <div class="postShorten-wrap">
             
             <div class="postShorten-header">
@@ -244,32 +294,13 @@
 
             </div>
             
-                <div class="postShorten-content" itemprop="articleBody">
-                    <p>Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (2)</p>
-<p>앞선 과정에서 git repository 등록까지 완료되었다면<br>이제 본격적으로 hexo를 설치해보자.</p>
-<p>먼저<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
-<p>npm을 사용하여 hexo-cli을 global( = -g )로 설치한다.<br>※ hexo-cli는 hexo 명령어를 사용하게 하기위한 npm 패키지이다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/shs400/shs400.github.io.git</div></pre></td></tr></table></figure>
-<p>1장에서 우리가 만들었던 git repository를 본인 PC에 clone 받는다.<br>필자는 본인의 git repository를 적어놓았다. 꼭 본인의 repository를 적도록 한다.<br>(clone 받을 디렉토리는 본인이 생성해주고 해당위치에 가서 clone 받아야한다.)</p>
-<blockquote>
-<p><img src="/img/hexo-install/img04.jpg" alt="터미널 경로"></p>
-</blockquote>
-<p>위의 경로와 같이 자신이 만든 디렉토리(필자는 sblog)에 clone을 받으면 된다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init [folder]</div><div class="line">$ <span class="built_in">cd</span> [folder]</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<p>hexo를 저장할 folder에 hexo를 초기화 시켜준다.<br>그리고 해당 folder로 이동하여 npm install하여 기본 파일들을 설치한다.<br>(필자는 sblog에 git clone하였으므로 folder는 shs400.github.io.git 일것이다.)</p>
-<p>기본적인 Setting은 마무리 되었다. 이제<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo server  <span class="comment">#기본 명령어</span></div><div class="line">$ hexo s       <span class="comment">#축약형 명령어</span></div></pre></td></tr></table></figure></p>
-<p>웹 브라우저에서 localhost:4000으로 접속하면 hexo가 적용된것을 확인할 수 있다.</p>
-<p>다음장에서는 기본적인 초기 Setting 후 본인의 github.io에<br>본인이 작업한 blog를 등록하는 방법을 알아보자.</p>
-
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <p>Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (2)<br>
                     
+                        <a href="/2017/04/21/hexo-install-2/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
                         
-                    
-                    
-                        <p>
-                            <a href="/2017/04/21/hexo-install-2/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
                     
                 </div>
             
@@ -278,61 +309,6 @@
             <a href="/2017/04/21/hexo-install-2/">
                 <div class="postShorten-thumbnailimg">
                     <img alt="" itemprop="image" src="https://shs400.github.io/2017/04/21/hexo-install-2/img01.jpg"/>
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2017/04/21/hexo-install-3/">
-                            Git에 Hexo 블로그를 적용해보자! (3)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-04-21T14:23:15+09:00">
-	
-		    4월 21, 2017
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/git/">git</a>, <a class="category-link" href="/categories/git/github/">github</a>, <a class="category-link" href="/categories/git/github/node-js/">node.js</a>, <a class="category-link" href="/categories/git/github/node-js/blog/">blog</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <p>Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (3)</p>
-
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2017/04/21/hexo-install-3/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2017/04/21/hexo-install-3/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="https://shs400.github.io/2017/04/21/hexo-install-3/img01.jpg"/>
                 </div>
             </a>
             
@@ -511,7 +487,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (2)<br></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -520,23 +496,23 @@
                 <div class="media">
                     
                     <div class="media-left">
-                        <a class="link-unstyled" href="https://shs400.github.io/2017/04/21/hexo-install-3/">
-                            <img class="media-image" src="https://shs400.github.io/2017/04/21/hexo-install-3/img01.jpg" width="90" height="90"/>
+                        <a class="link-unstyled" href="https://shs400.github.io/2017/04/24/hexo-install-3/">
+                            <img class="media-image" src="https://shs400.github.io/2017/04/24/hexo-install-3/img01.jpg" width="90" height="90"/>
                         </a>
                     </div>
                     
                     <div class="media-body">
-                        <a class="link-unstyled" href="https://shs400.github.io/2017/04/21/hexo-install-3/">
+                        <a class="link-unstyled" href="https://shs400.github.io/2017/04/24/hexo-install-3/">
                             <h3 class="media-heading">Git에 Hexo 블로그를 적용해보자! (3)</h3>
                         </a>
                         <span class="media-meta">
                             <span class="media-date text-small">
                                 
-                                    2017년 4월 21일
+                                    2017년 4월 24일
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (3)<br></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
