@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://shs400.github.io/2017/04/24/hexo-install-3/index.html">
 <meta property="og:site_name" content="HyunSu - Blog">
 <meta property="og:description" content="Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (3)">
-<meta property="og:updated_time" content="2017-04-24T06:56:33.734Z">
+<meta property="og:updated_time" content="2017-04-24T07:25:40.007Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git에 Hexo 블로그를 적용해보자! (3)">
 <meta name="twitter:description" content="Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (3)">
@@ -247,7 +247,15 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <!-- excerpt --><br>Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (3)</p>
+            <!-- excerpt --></p>
+<p>2장까지는 본인의 Local에 Hexo 블로그를 설치해보았다.<br>이번장에는 본인의 Git repository에 배포하는 방법을 알아보자.</p>
+<p>먼저 githbu에 deploy 해줄 플러그인을 설치해준다.<br>※ deploy란 배포를 뜻한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --save hexo-deployer-git</div></pre></td></tr></table></figure></p>
+<p>설치가 끝난 뒤 Hexo 설정파일 _config.yml에서 아래의 내용을 수정한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line">url: https://shs400.github.io  // https://깃허브계정명.github.io</div><div class="line">root: / </div><div class="line">permalink: :year/:month/:day/:title/ </div><div class="line">permalink_defaults:</div></pre></td></tr></table></figure></p>
+<p>그리고<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: https://github.com/본인계정명/본인계정명.github.io.git  // 본인의 Github repository</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>두 부분을 수정한 후<br>Github에 만든 blog파일을 deploy해주면 배포가 완료되는데<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hexo clean        <span class="comment">#빌드된 public을 삭제한다. (처음에 한번만 해도된다.)</span></div><div class="line">$ hexo generate     <span class="comment">#빌드해준다.</span></div><div class="line">$ hexo deploy       <span class="comment">#기본 명령어 - 배포</span></div><div class="line">$ hexo d            <span class="comment">#축약형 명령어</span></div></pre></td></tr></table></figure></p>
+<p>위와 같이 기존 빌드된 내용을 clean(삭제)해주고<br>generate(빌드)하고난 뒤에 deploy(배포)를 하게되면<br>Github master에 배포가 되게된다.</p>
+<p>배포가 완료되었다면<br>본인의 <a href="https://깃허브계정명.github.io" target="_blank" rel="external">https://깃허브계정명.github.io</a> url로 접속하면 블로그가 적용된것을 볼 수 있을것이다.</p>
+<p>참고로 필자는 빌드와 배포를 동시에 하기위해 옵션으로 -g를 사용한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy -g    <span class="comment">#빌드하고 배포한다.  -g는 generate옵션</span></div></pre></td></tr></table></figure></p>
             
         </div>
     </div>
