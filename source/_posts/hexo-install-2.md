@@ -28,7 +28,6 @@ actions: false
 ---
 Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (2)
 <!-- excerpt -->
-
 Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (2)
 
 앞선 과정에서 git repository 등록까지 완료되었다면
