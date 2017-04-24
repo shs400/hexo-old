@@ -7,8 +7,6 @@ tags:
 - node.js
 - blog
 ---
-Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (1)
-<!-- excerpt -->
 
 Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (1)
 
