@@ -6,17 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="HyunSu - Blog">
-    <title>Tag: javascript - HyunSu - Blog</title>
+    <title>javascript - call(),apply(), bind() 메서드 - HyunSu - Blog</title>
     <meta name="author" content="hyunsu SIM">
     
+        <meta name="keywords" content="javascript">
     
     
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="HyunSu - Blog">
-<meta property="og:url" content="https://shs400.github.io/tags/javascript/index.html">
+    
+    <meta name="description" content="call(),apply(), bind() 메서드">
+<meta name="keywords" content="blog,javascript">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="javascript - call(),apply(), bind() 메서드">
+<meta property="og:url" content="https://shs400.github.io/2018/01/02/script-study03/index.html">
 <meta property="og:site_name" content="HyunSu - Blog">
+<meta property="og:description" content="call(),apply(), bind() 메서드">
+<meta property="og:updated_time" content="2018-01-02T09:29:52.690Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HyunSu - Blog">
+<meta name="twitter:title" content="javascript - call(),apply(), bind() 메서드">
+<meta name="twitter:description" content="call(),apply(), bind() 메서드">
     
     
         
@@ -25,6 +32,9 @@
         <meta property="og:image" content="https://shs400.github.io/assets/images/img.jpg"/>
     
     
+    
+        <meta property="og:image" content="https://shs400.github.io/2018/01/02/script-study03/../../../../images/img.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://shs400.github.io/2018/01/02/script-study03/../../../../images/img.jpg" />
     
     
     <!--STYLES-->
@@ -45,7 +55,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">HyunSu - Blog</a>
@@ -69,7 +79,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -208,172 +218,77 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
-                 class="
-                        hasCoverMetaIn
-                        ">
+        <div class="post-header-cover
+                    text-center
+                    post-header-cover--partial"
+             style="background-image:url('/2018/01/02/script-study03/../../../../images/img.jpg');"
+             data-behavior="4">
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaOut
+                        hasCoverCaption">
                 
-    <section class="postShorten-group main-content-wrap">
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">A beautiful sunrise</span>
     
     
-    <article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/01/02/script-study03/">
-                            javascript - call(),apply(), bind() 메서드
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-01-02T16:43:50+09:00">
-	
-		    1월 02, 2018
-    	
-    </time>
+        <div class="post-header main-content-wrap text-center">
     
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/javascript/">javascript</a>, <a class="category-link" href="/categories/javascript/blog/">blog</a>, <a class="category-link" href="/categories/javascript/blog/study/">study</a>
-
-
+        <h1 class="post-title" itemprop="headline">
+            javascript - call(),apply(), bind() 메서드
+        </h1>
+    
     
 </div>
-
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>call(),apply(), bind() 메서드<br>
-                    
-                        <a href="/2018/01/02/script-study03/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <!-- excerpt --></p>
+<p>앞서 설명하였던 기본적인 this 바인딩 3가지 방법 외에도<br>메서드를 이용하여 임의적으로 특정 객체에 바인딩 시키는 방법이 3가지 존재한다.</p>
+<p>1) apply() 메서드</p>
+<ul>
+<li>apply은 파라미터 중 첫 번째 인자를 함수 내부에서 사용할 this로 만들어준다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Name = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> objName = &#123;&#125;</div><div class="line">Name.apply(objName,[<span class="string">'sim'</span>]);</div><div class="line"><span class="built_in">console</span>.log(objName);</div><div class="line"><span class="comment">//&#123; name: 'sim' &#125;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>2) call() 메서드</p>
+<ul>
+<li>call은 apply와 기능은 같지만, 두번째 매개변수가 배열이 아닌 각각의 값으로 넘길 수 있다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Name = <span class="function"><span class="keyword">function</span>(<span class="params">name,age</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">    <span class="keyword">this</span>.age = age;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> objName = &#123;&#125;</div><div class="line">Name.call(objName,<span class="string">'sim'</span>,<span class="number">31</span>);</div><div class="line"><span class="built_in">console</span>.log(objName);</div><div class="line"><span class="comment">//&#123; name: 'sim', age: 31&#125;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3) bind() 메서드 ※ es5 문법</p>
+<ul>
+<li>함수가 가리키는 this만 바꾸고 호출하지는 않음.</li>
+<li>새 함수를 만드는데 그 this는 bind에 전달된 값. <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.color = <span class="string">"red"</span>;</div><div class="line"> <span class="keyword">var</span> example = &#123; <span class="attr">color</span> : <span class="string">"blue"</span>&#125;;</div><div class="line"> </div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">colorValue</span>(<span class="params"></span>) </span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(<span class="keyword">this</span>.color);</div><div class="line"> &#125;</div><div class="line">colorValue();</div><div class="line"><span class="keyword">var</span> bindColor = colorValue.bind(example);</div><div class="line">bindColor();</div><div class="line"><span class="comment">// red</span></div><div class="line"><span class="comment">// blue</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>colorValue 함수의 this는 window 이므로 red 가 출력되고<br>colorValue에 example 을 bind 해줄시 this가 example 객체를 가리키므로<br>this.color 값은 blue가 된다.</p>
             
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-            <a href="/2018/01/02/script-study03/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="https://shs400.github.io/2018/01/02/script-study03/../../../../images/img.jpg"/>
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2018/01/02/script-study02/">
-                            javascript - this 바인딩
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2018-01-02T15:54:29+09:00">
-	
-		    1월 02, 2018
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/javascript/">javascript</a>, <a class="category-link" href="/categories/javascript/blog/">blog</a>, <a class="category-link" href="/categories/javascript/blog/study/">study</a>
-
-
-    
-</div>
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/blog/">blog</a> <a class="tag tag--primary tag--small t-link" href="/tags/javascript/">javascript</a>
 
             </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>this 바인딩<br>
-                    
-                        <a href="/2018/01/02/script-study02/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
         
-            <a href="/2018/01/02/script-study02/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="https://shs400.github.io/2018/01/02/script-study02/../../../../images/img.jpg"/>
-                </div>
-            </a>
-            
         
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2017/12/29/script-study01/">
-                            javascript - clouser(클로저)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-12-29T11:04:32+09:00">
-	
-		    12월 29, 2017
-    	
-    </time>
-    
-        <span>in </span>
         
-    <a class="category-link" href="/categories/javascript/">javascript</a>, <a class="category-link" href="/categories/javascript/blog/">blog</a>, <a class="category-link" href="/categories/javascript/blog/study/">study</a>
-
-
-    
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+            
+        
+    </div>
+</article>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>clouser(클로저)<br>
-                    
-                        <a href="/2017/12/29/script-study01/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2017/12/29/script-study01/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="https://shs400.github.io/2017/12/29/script-study01/../../../../images/img.jpg"/>
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
-        
-        
-        <li class="pagination-number">page 1 of 1</li>
-    </ul>
-</div>
-
-</section>
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -610,6 +525,25 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
 <!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'https://shs400.github.io/2018/01/02/script-study03/';
+                 
+                    this.page.identifier = 'shs400';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'shs400';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
 
 
     </body>
