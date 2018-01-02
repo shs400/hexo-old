@@ -6,18 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="HyunSu - Blog">
-    <title>all-archives - HyunSu - Blog</title>
+    <title>javascript - this 바인딩 - HyunSu - Blog</title>
     <meta name="author" content="hyunsu SIM">
     
+        <meta name="keywords" content="javascript">
     
     
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="all-archives">
-<meta property="og:url" content="https://shs400.github.io/all-archives/index.html">
+    
+    <meta name="description" content="this 바인딩">
+<meta name="keywords" content="blog,javascript">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="javascript - this 바인딩">
+<meta property="og:url" content="https://shs400.github.io/2018/01/02/script-study02/index.html">
 <meta property="og:site_name" content="HyunSu - Blog">
-<meta property="og:updated_time" content="2017-04-24T09:18:19.266Z">
+<meta property="og:description" content="this 바인딩">
+<meta property="og:updated_time" content="2018-01-02T07:17:24.388Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="all-archives">
+<meta name="twitter:title" content="javascript - this 바인딩">
+<meta name="twitter:description" content="this 바인딩">
     
     
         
@@ -26,6 +32,9 @@
         <meta property="og:image" content="https://shs400.github.io/assets/images/img.jpg"/>
     
     
+    
+        <meta property="og:image" content="https://shs400.github.io/2018/01/02/script-study02/img.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://shs400.github.io/2018/01/02/script-study02/img.jpg" />
     
     
     <!--STYLES-->
@@ -46,7 +55,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">HyunSu - Blog</a>
@@ -70,7 +79,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -209,108 +218,73 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
-                 class="
-                        hasCoverMetaIn
-                        ">
+        <div class="post-header-cover
+                    text-center
+                    post-header-cover--partial"
+             style="background-image:url('/2018/01/02/script-study02/img.jpg');"
+             data-behavior="4">
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaOut
+                        hasCoverCaption">
                 
-<div id="archives" class="main-content-wrap">
-    <form id="filter-form" action="#">
-        <input name="date" type="text" class="form-control input--xlarge" placeholder="Search date (YYYY/MM/DD)" autofocus="autofocus">
-    </form>
-    <h5 class="archive-result text-color-base text-xlarge"
-        data-message-zero="no post found"
-        data-message-one="1 post found"
-        data-message-other="{n} posts found"></h5>
-    <section class="boxes">
-        
-            
-            
-            
-                
-                
-                <div class="archive archive-year box" data-date="2018">
-                    <h4 class="archive-title">
-                        <a class="link-unstyled" href="/archives/2018">2018</a>
-                    </h4>
-            
-            
-                
-                <ul class="archive-posts archive-month" data-date="201801">
-                    <h5 class="archive-title">
-                        <a class="link-unstyled" href="/archives/2018/01">January</a>
-                    </h5>
-                
-            
-            <li class="archive-post archive-day" data-date="20180102">
-                <a class="archive-post-title" href="/2018/01/02/script-study02/">javascript - this 바인딩</a>
-                <span class="archive-post-date"> - 1월 02, 2018</span>
-            </li>
-        
-            
-            
-            
-                
-                    </div>
-                    
-                
-                
-                <div class="archive archive-year box" data-date="2017">
-                    <h4 class="archive-title">
-                        <a class="link-unstyled" href="/archives/2017">2017</a>
-                    </h4>
-            
-            
-                
-                <ul class="archive-posts archive-month" data-date="201712">
-                    <h5 class="archive-title">
-                        <a class="link-unstyled" href="/archives/2017/12">December</a>
-                    </h5>
-                
-            
-            <li class="archive-post archive-day" data-date="20171229">
-                <a class="archive-post-title" href="/2017/12/29/script-study01/">javascript - clouser(클로저)</a>
-                <span class="archive-post-date"> - 12월 29, 2017</span>
-            </li>
-        
-            
-            
-            
-            
-                
-                    </ul>
-                
-                <ul class="archive-posts archive-month" data-date="201704">
-                    <h5 class="archive-title">
-                        <a class="link-unstyled" href="/archives/2017/04">April</a>
-                    </h5>
-                
-            
-            <li class="archive-post archive-day" data-date="20170424">
-                <a class="archive-post-title" href="/2017/04/24/hexo-install-3/">Git에 Hexo 블로그를 적용해보자! (3)</a>
-                <span class="archive-post-date"> - 4월 24, 2017</span>
-            </li>
-        
-            
-            
-            
-            
-            <li class="archive-post archive-day" data-date="20170421">
-                <a class="archive-post-title" href="/2017/04/21/hexo-install-2/">Git에 Hexo 블로그를 적용해보자! (2)</a>
-                <span class="archive-post-date"> - 4월 21, 2017</span>
-            </li>
-        
-            
-            
-            
-            
-            <li class="archive-post archive-day" data-date="20170421">
-                <a class="archive-post-title" href="/2017/04/21/hexo-install/">Git에 Hexo 블로그를 적용해보자! (1)</a>
-                <span class="archive-post-date"> - 4월 21, 2017</span>
-            </li>
-        
-    </section>
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">A beautiful sunrise</span>
+    
+    
+        <div class="post-header main-content-wrap text-center">
+    
+        <h1 class="post-title" itemprop="headline">
+            javascript - this 바인딩
+        </h1>
+    
+    
 </div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <!-- excerpt --></p>
+<p>this 바인딩은 기본적으로 3가지 유형이 있다.<br>this는 함수가 호출되는 패턴에 따라 this가 어디에 바인딩 되는지 결정된다.</p>
+<ol>
+<li><p>전역함수를 호출할 떄 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> global = <span class="string">'global'</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Func</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> global = <span class="string">'local'</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'this.global : '</span>,<span class="keyword">this</span>.global);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'this : '</span>,<span class="keyword">this</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">Func();</div><div class="line"><span class="comment">// global</span></div><div class="line"><span class="comment">// window</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>함수가 객체의 속성이고 해당 객체를 통해 함수를 호출할 때</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">    <span class="attr">func</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">obj.func();</div><div class="line"><span class="comment">// object ( obj 객체 )</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>생성자 함수(new)를 호출할 때 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name || <span class="string">'empty'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> sim = <span class="keyword">new</span> Person(<span class="string">'sim'</span>);</div><div class="line"><span class="built_in">console</span>.log(sim.name);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>이외의 방법으로 call(),apply(), bind() 메서드가 존재한다. </p>
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/blog/">blog</a> <a class="tag tag--primary tag--small t-link" href="/tags/javascript/">javascript</a>
+
+            </div>
+        
+        
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
+
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
@@ -521,6 +495,25 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
 <!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'https://shs400.github.io/2018/01/02/script-study02/';
+                 
+                    this.page.identifier = 'shs400';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'shs400';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
 
 
     </body>
