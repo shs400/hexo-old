@@ -21,7 +21,7 @@ metaAlignment: center
 coverCaption: "A beautiful sunrise"
 coverMeta: out
 coverSize: partial
-coverImage: img01.jpg
+coverImage: ../../../../images/img.jpg
 comments: true
 meta: false
 actions: false
@@ -33,7 +33,7 @@ Hexo를 사용하여 git과 연동한 후 블로그를 만들어보자! (3)
 2장까지는 본인의 Local에 Hexo 블로그를 설치해보았다.
 이번장에는 본인의 Git repository에 배포하는 방법을 알아보자.
 
-먼저 githbu에 deploy 해줄 플러그인을 설치해준다.
+먼저 github에 deploy 해줄 플러그인을 설치해준다.
 ※ deploy란 배포를 뜻한다.
 ``` bash
 $ npm install --save hexo-deployer-git

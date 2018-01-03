@@ -21,7 +21,7 @@ metaAlignment: center
 coverCaption: "A beautiful sunrise"
 coverMeta: out
 coverSize: partial
-coverImage: img01.jpg
+coverImage: ../../../../images/img.jpg
 comments: true
 meta: false
 actions: false
